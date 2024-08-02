@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leonardo</title>
+    <style>
+        body{
+            background-color: #aaa;
+        }
+        #div1{
+            background-color: aqua;
+            border: 1px solid;
+            height: 100px;
+        }
+        img{
+            height: 100px;
+            width: 100px;
+        }
+        .container{
+            border: 1px  solid #eee;
+            padding: 20px;
+            margin: 20px;
+        }
+        .h2{
+            background-color: azure;
+            margin: 10px;
+            padding: 5px;
+            
+        }
+    </style>
+   
+</head>
+<body>
+    <img src="clicar no gostei.png" alt="noticia " onclick="">
+    <div id="div1" >  boa noite </div>
+    <h1 id="titulo">HTML</h1>
+   
+    <label >Usuario</label>
+    <form action="" method="get">
+        <input type="file" name="text_usuario" multiple> <!-- multiple permite selecionar mais de um arquivo -->
+    </form>
+    <div class='container'>
+       dentro do  div 
+    </div>
+    <h2 class="h2">laura lopes fernandes</h2>
+    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+
+
+    <script>
+        console.log('olá javascript!')
+        function saudacao (){
+          }
+        saudacao()
+        document.getElementById('titulo').innertext='Novo Html'
+        let elemento = document.querySelector('#div1')
+       console.log (elemento.innertext)// o innertext ignora todo o conteúdo do html trazendo só o texto que está na tag 
+       elemento.innerHTML='<p>novo pragrafo</p>'
+       console.log(elemento.outerHTML)
+       elemento.style.background = 'red'
+       let div = document.querySelector('.container')
+       // vamos adcionar um texto antes do div
+       div.before('leonardo lopes fernandes ')
+       // antes do div ,mas no inicio 
+       div.prepend('começo ')
+       // adicionar dentro do div ,mas no fim 
+       div.append(' fim ')
+       // adicionar depois do div
+       div.after('leonardo lopes fernandes')
+       //agora vamos criar um paragrafo depois da minha div
+       let p1 = document.createElement('p')
+       p1.innerText='meu paragrafo feito pelo js!'
+       div.after(p1)
+       let h2 =document.querySelector('h2')
+       console.log (h2.className)
+       
+
+
+    </script>
+
+</body>
+</html>
